@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Josh Powell for Westland | Together we Can</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+    /* Pulse animation for donate buttons */
+    @keyframes pulse-donate {
+      0% { transform: scale(1); }
+      2% { transform: scale(1.1); }
+      5% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+    .donate-cta {
+      position: relative;
+      animation: pulse-donate 10s infinite;
+      animation-duration: 10s;
+      animation-timing-function: cubic-bezier(0.4,0,0.2,1);
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      overflow: hidden;
+    }
+    .donate-cta:hover::before {
+      content: '';
+      position: absolute;
+      top: -60%;
+      left: -40%;
+      width: 60%;
+      height: 200%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.0) 100%);
+      transform: skewX(-20deg) translateX(-100%);
+      animation: donate-reflection 0.5s forwards;
+      pointer-events: none;
+      z-index: 2;
+    }
+    @keyframes donate-reflection {
+      0% { transform: skewX(-20deg) translateX(-100%); opacity: 0.2; }
+      60% { opacity: 0.7; }
+      100% { transform: skewX(-20deg) translateX(220%); opacity: 0; }
+    }
+    .donate-cta:active {
+      transform: scale(0.97);
+    }
+    .join-team-cta {
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+    }
+    .join-team-cta:hover::before {
+      content: '';
+      position: absolute;
+      top: -60%;
+      left: -40%;
+      width: 60%;
+      height: 200%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.0) 100%);
+      transform: skewX(-20deg) translateX(-100%);
+      animation: donate-reflection 0.5s forwards;
+      pointer-events: none;
+      z-index: 2;
+    }
+  </style>
+  <!-- FLODESK SCRIPT -->
+  <script>
+    (function(w, d, t, h, s, n) {
+      w.FlodeskObject = n;
+      var fn = function() {
+        (w[n].q = w[n].q || []).push(arguments);
+      };
+      w[n] = w[n] || fn;
+      var f = d.getElementsByTagName(t)[0];
+      var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+      var sm = d.createElement(t);
+      sm.async = true;
+      sm.type = 'module';
+      sm.src = h + s + '.mjs' + v;
+      f.parentNode.insertBefore(sm, f);
+      var sn = d.createElement(t);
+      sn.async = true;
+      sn.noModule = true;
+      sn.src = h + s + '.js' + v;
+      f.parentNode.insertBefore(sn, f);
+    })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+  </script>
+  <!-- Primary Meta Tags -->
+  <meta name="description" content="Josh Powell for Westland City Counsil. Join the movement for a freer, safer, and more prosperous Westland. Get involved and meet Josh. Together we can!">
+  <link rel="canonical" href="http://powell4westland.com/">
+  <link rel="icon" type="image/png" href="/pictures/josh_powell_for_westland_card.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://powell4westland.com/">
+  <meta property="og:title" content="Josh Powell for Westland | Together we can!">
+  <meta property="og:description" content="Josh Powell for Westland City Council. Join the movement for a freer, safer, and more prosperous Westland. Get involved and meet Josh, Together we can!">
+  <meta property="og:image" content="http://powell4westland.com/pictures/josh_powell_for_westland_card.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="http://powell4westland.com/">
+  <meta name="twitter:title" content="Josh Powell for Westland | Together we can!">
+  <meta name="twitter:description" content="Josh Powell for Westland City Council. Join the movement for a freer, safer, and more prosperous Westland. Get involved and meet Josh, Together we can!">
+  <meta name="twitter:image" content="http://powell4westland.com/pictures/josh_powell_for_westland_card.png">
+</head>
+<body class="bg-[#F8F8F8] text-[#0B1F3A] scroll-smooth">
+
+
+  <!-- HEADER -->
+  <header class="sticky top-0 w-full bg-white shadow-sm z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <a href="#" class="text-2xl font-extrabold tracking-wide">POWELL '25</a>
+      <!-- Hamburger Button (Mobile Only) -->
+      <button id="mobile-menu-toggle" aria-label="Open menu" class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#B21E35]">
+        <svg class="w-7 h-7 text-[#0B1F3A]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#about" class="hover:text-[#B21E35]">About</a>
+        <a href="#issues" class="hover:text-[#B21E35]">Issues</a>
+        <a href="#events" class="hover:text-[#B21E35]">Events</a>
+      </nav>
+      <a href="#join-team-powell" class="bg-[#0B1F3A] text-white uppercase font-semibold px-4 py-2 rounded-lg shadow hover:shadow-lg join-team-cta mr-2 hidden md:inline-block">Join Team Powell</a>
+      <a href="https://www.efundraisingconnections.com/c/JoshuaPowell" target="_blank" rel="noopener noreferrer" class="bg-[#B21E35] text-white uppercase font-semibold px-4 py-2 rounded-lg shadow hover:shadow-lg donate-cta hidden md:inline-block">Donate</a>
+    </div>
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-50 flex md:hidden transition-opacity duration-300 opacity-0 pointer-events-none">
+      <div class="bg-white w-4/5 max-w-xs h-full shadow-lg flex flex-col p-6 space-y-4 animate-slide-in-left" style="min-width:220px;">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-2xl font-extrabold tracking-wide">POWELL '25</span>
+          <button id="mobile-menu-close" aria-label="Close menu" class="p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#B21E35]">
+            <svg class="w-6 h-6 text-[#0B1F3A]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <a href="#about" class="block py-2 px-2 rounded hover:bg-gray-100 text-[#0B1F3A] font-semibold" onclick="closeMobileMenu()">About</a>
+        <a href="#issues" class="block py-2 px-2 rounded hover:bg-gray-100 text-[#0B1F3A] font-semibold" onclick="closeMobileMenu()">Issues</a>
+        <a href="#events" class="block py-2 px-2 rounded hover:bg-gray-100 text-[#0B1F3A] font-semibold" onclick="closeMobileMenu()">Events</a>
+        <a href="#join-team-powell" class="block py-2 px-2 rounded bg-[#0B1F3A] text-white font-semibold mt-2 join-team-cta" onclick="closeMobileMenu()">Join Team Powell</a>
+        <a href="https://www.efundraisingconnections.com/c/JoshuaPowell" target="_blank" rel="noopener noreferrer" class="block py-2 px-2 rounded bg-[#B21E35] text-white font-semibold mt-2 donate-cta" onclick="closeMobileMenu()">Donate</a>
+      </div>
+      <div class="flex-1" onclick="closeMobileMenu()"></div>
+    </div>
+    <style>
+      @keyframes slide-in-left {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+      }
+      .animate-slide-in-left {
+        animation: slide-in-left 0.3s cubic-bezier(0.4,0,0.2,1);
+      }
+    </style>
+  </header>
+
+  <!-- HERO SECTION WITH BACKGROUND + Phone Number -->
+  <section class="relative flex items-center justify-center py-32" style="background: url('pictures/cityhall.jpg') center/cover;">
+    <!-- overlay -->
+    <div class="absolute inset-0 bg-[#14213D]/75"></div>
+    <div class="relative z-10 max-w-6xl w-full px-6 md:px-10 grid md:grid-cols-2 gap-16 items-center">
+      <!-- headline copy -->
+      <div class="text-center md:text-left space-y-6">
+        <p class="text-sm tracking-widest text-[#F8F8F8] font-semibold">TOGETHER, WE CAN.</p>
+        <h1 class="text-white text-4xl md:text-6xl font-bold leading-tight">FREEDOM<br class="hidden md:block">FOR EVERY FAMILY</h1>
+        <a href="https://www.efundraisingconnections.com/c/JoshuaPowell" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#B21E35] text-white uppercase font-bold px-10 py-4 rounded-lg shadow hover:shadow-lg donate-cta">Donate Now</a>
+      </div>
+      <!-- Phone Number -->
+      <div class="relative bg-white/95 backdrop-blur-md rounded-2xl shadow-xl p-10 md:p-12 flex flex-col items-center justify-center overflow-hidden" style="border: 5px solid #0B1F3A;">
+        <!-- Faded background image -->
+        <div class="absolute inset-0 z-0" style="background: url('pictures/josh_powell_for_westland_card.png') center/100% auto no-repeat; opacity: 0.05;"></div>
+        <div class="relative z-10 text-center">
+          <h4 class="text-2xl font-bold mb-2 text-[#0B1F3A]">Text Josh Powell Now</h4>
+          <p class="text-2xl font-semibold text-[#B21E35] tracking-wide mb-4">734-234-8135</p>
+          <div class="mt-6">
+            <p class="text-base font-semibold text-[#0B1F3A] mb-2">Find Josh Powell on his socials</p>
+            <div class="flex justify-center space-x-4">
+              <!-- X (Twitter) -->
+              <a href="https://x.com/powell4westland" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" class="w-6 h-6 text-black" fill="currentColor"><rect width="120" height="120" rx="24" fill="none"/><path d="M86.5 32h-11.1L60 54.2 44.6 32H33.5l21.7 31.1L33 88h11.1l15.9-23.2L75.4 88H86.5L64.7 56.6 86.5 32zm-13.2 48.1-8.7-12.7-8.7 12.7H73.3zm-26.6-44.2 8.7 12.7 8.7-12.7H46.7z"/></svg>
+              </a>
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/powell4westland/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-black" ><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 2.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25 1.25a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+              </a>
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/powell4michigan/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-black" ><path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.261c-1.243 0-1.632.771-1.632 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN TEAM POWELL SECTION -->
+  <section id="join-team-powell"class="w-full flex justify-center py-16 px-4 bg-white/80">
+    <div class="max-w-6xl w-full">
+      <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Join Team Powell</h2>
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 items-stretch">
+        <!-- YouTube Video -->
+        <div class="relative aspect-w-16 aspect-h-9 xl:aspect-w-1 xl:aspect-h-1 w-full flex items-center justify-center min-h-[300px]">
+          <iframe class="absolute top-0 left-0 w-full h-full rounded-xl shadow min-h-[300px]" src="https://www.youtube.com/embed/TYxycJFoP1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <!-- Flodesk Box -->
+        <div class="relative aspect-w-16 aspect-h-9 xl:aspect-w-1 xl:aspect-h-1 w-full bg-white/95 backdrop-blur-md rounded-2xl shadow-xl flex items-center justify-center min-h-[300px]">
+          <div class="w-full h-full flex items-center justify-center p-6 md:p-10">
+            <div id="fd-form-68369182ce76d29e1d42872f" class="w-full"></div>
+          </div>
+          <script>
+            window.fd('form', {
+              formId: '68369182ce76d29e1d42872f',
+              containerEl: '#fd-form-68369182ce76d29e1d42872f'
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE BANNER -->
+  <section id="donate2" class="py-16 bg-[#B21E35] text-white text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Donate</h2>
+    <h3 class="text-2xl md:text-3xl font-bold mb-4">Every $25 Moves Michigan Forward</h3>
+    <p class="mb-8 max-w-2xl mx-auto">Your contribution fuels door-knocking, yard signs, and the grassroots energy we need for victory.</p>
+    <form class="flex justify-center max-w-xl mx-auto">
+      <button type="submit" class="bg-white text-[#B21E35] font-bold px-4 py-3 rounded-lg shadow hover:shadow-lg donate-cta" onclick="window.open('https://www.efundraisingconnections.com/c/JoshuaPowell', '_blank', 'noopener,noreferrer'); return false;">Donate</button>
+    </form>
+  </section>
+
+  <!-- ISSUES -->
+  <section id="issues" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Issues</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow p-8">
+          <h3 class="text-xl font-bold mb-2">Revitalize Westland Mall</h3>
+          <p class="italic text-[#B21E35] mb-2">Turn a fading icon into our new community heart.</p>
+          <p>Westland Mall once defined our city; today it needs a 21st-century purpose. I'll work with the mall's owners to reinvest, convert an empty anchor store into a year-round community center, and attract new mixed-use tenants so the site becomes a hub of activity—not a demolition project.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-8">
+          <h3 class="text-xl font-bold mb-2">Competitive Taxes & Business-Friendly Rules</h3>
+          <p class="italic text-[#B21E35] mb-2">Lower millage, cut red tape, invite investment.</p>
+          <p>Sky-high property taxes and cumbersome ordinances push entrepreneurs to neighboring towns. I'll fight to trim our millage and streamline the permits process so developers, shops, and even manufacturers see Westland as the first—not last—place to build and grow.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-8">
+          <h3 class="text-xl font-bold mb-2">Affordable Utilities & Local Energy</h3>
+          <p class="italic text-[#B21E35] mb-2">Lower bills through community-controlled water and power.</p>
+          <p>Residents and businesses deserve relief from spiraling utility costs. I'll champion a city water tower to stabilize rates and supply, and explore a regional power co-op that delivers reliable, lower-cost energy—saving money while making Westland more attractive to new investment.</p>
+        </div>
+      </div>
+      <div id="issues-details" class="hidden max-w-6xl mx-auto mt-8 space-y-8 bg-white rounded-2xl shadow p-8">
+        <div>
+          <h4 class="text-xl font-bold mb-2">Revitalize Westland Mall </h4>
+          <p class="mb-2">We need to address the elephant in the room (or in the center of town in our city): the mall. Now, I don't know if you are aware of this, but Westland—the city—was named after Westland Mall. At the time of its opening, Westland Mall was part of a group of malls that opened in Detroit's heyday and ushered in a new way to shop indoors, comfortably, all year long. For the west side of Detroit, the nicest place to shop was Westland Mall, but it's no secret that the mall has fallen on hard times. So we need to work with the mall's management company to incentivize them to reinvest in the mall—work with them to use one of the large, empty anchor stores to build a community center right in the heart of the city and bring life back to an area others just want to see bulldozed. The days of buying all your clothes and electronics at the mall are gone, but that doesn't mean we can't evolve our spaces to attract new investment while honoring the history and legacy of the city.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-2">Competitive Taxes & Business-Friendly Rules</h4>
+          <p class="mb-2">We have to make Westland more competitive with our property-tax millages, city ordinances, and regulations. While cities on all sides of us attract new businesses, new investment, and even new manufacturing facilities, our high property-tax rates and burdensome regulatory environment keep developers and investors from even contemplating Westland as an option. I have personally worked with business leaders in our area who will consider building all over western metro Detroit and most of Michigan—except for Westland—and that has to change.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-2">Affordable Utilities & Local Energy</h4>
+          <p class="mb-2">We need to take steps to reduce the cost of energy and all utilities for both residents and businesses. I have long been an advocate for building a water tower in the city so we have more control over water rates charged to citizens, the ability to maintain an emergency reserve in the event of a wider water-system failure, and to better monitor our water quality and safety. I also believe we should begin discussions with surrounding communities with the goal of creating a new power co-op that can better serve the local community, lower the cost of energy, and by extension attract new investors to our city.</p>
+        </div>
+      </div>
+      <div class="flex justify-center mt-8">
+        <button id="issues-learn-more" class="text-blue-600 hover:underline focus:outline-none">
+          Learn more
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-12 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">About Josh Powell</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Images Column -->
+        <div class="space-y-4">
+          <img src="pictures/joshpowell03.png" alt="About image 1" class="w-full object-cover" style="aspect-ratio:16/9; object-position: 0px -90px;" id="about-img-1">
+          <img src="pictures/Joshpowell02.jpg" alt="About image 2" class="w-full object-cover hidden" style="aspect-ratio:16/9;" id="about-img-2">
+          <img src="pictures/joshpowell01.jpg" alt="About image 3" class="w-full object-cover hidden" style="aspect-ratio:16/9; object-position: 0px -70px;" id="about-img-3">
+        </div>
+        <!-- Text Column -->
+        <div class="text-gray-700">
+          <!-- Initial visible paragraph -->
+          <p id="about-text-1" class="mb-4">
+            Josh Powell is a lifelong Westland and Michigan resident whose love for his hometown has shaped every chapter of his life. Raised in a tight-knit neighborhood, Josh learned early the importance of hard work, family, and looking out for your neighbors. After graduating from high school, he served proudly as a Military Police officer in the U.S. Army, gaining firsthand experience in discipline, responsibility, and service to others. When he returned home, Josh didn’t just settle back into civilian life — he rolled up his sleeves and built a successful small business from the ground up, creating jobs and offering mentorship opportunities to people right here in the local community.
+          </p>
+          <!-- Hidden extended text -->
+          <div id="about-text-rest" class="hidden space-y-4">
+            <p>
+              As a husband and father, Josh’s connection to Westland runs even deeper. He and his partner, Sarah, are raising their two children just a few miles from where he grew up, instilling in them the same values of community and commitment that shaped his own childhood. Whether he’s coaching Little League, volunteering at the local food pantry, or lending his time to school and civic projects, Josh is constantly looking for ways to give back to the place that has given him so much. His decision to run for city council comes not from political ambition, but from a heartfelt passion to help his neighbors, strengthen the city, and ensure that Westland remains a place where families, businesses, and future generations can thrive.
+            </p>
+            <p>
+              Josh is a member of the American Legion, competes in weightlifting, and often trains with his dog, Axle Rose
+            </p>
+          </div>
+          <!-- Toggle Link -->
+          <button id="about-toggle" class="text-blue-600 hover:underline focus:outline-none">
+            Read more
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toggle Script -->
+  <script>
+    // Smooth toggle for About section
+    document.getElementById('about-toggle').addEventListener('click', function() {
+      const moreText = document.getElementById('about-text-rest');
+      const img2 = document.getElementById('about-img-2');
+      const img3 = document.getElementById('about-img-3');
+      const isHidden = moreText.classList.contains('hidden');
+      if (isHidden) {
+        moreText.classList.remove('hidden');
+        moreText.style.height = '0px';
+        moreText.style.overflow = 'hidden';
+        moreText.style.transition = 'height 400ms cubic-bezier(0.4, 0, 0.2, 1)';
+        // Force reflow
+        void moreText.offsetWidth;
+        moreText.style.height = moreText.scrollHeight + 'px';
+        setTimeout(() => {
+          moreText.style.height = '';
+          moreText.style.overflow = '';
+          moreText.style.transition = '';
+        }, 400);
+      } else {
+        moreText.style.height = moreText.scrollHeight + 'px';
+        moreText.style.overflow = 'hidden';
+        moreText.style.transition = 'height 400ms cubic-bezier(0.4, 0, 0.2, 1)';
+        // Force reflow
+        void moreText.offsetWidth;
+        moreText.style.height = '0px';
+        setTimeout(() => {
+          moreText.classList.add('hidden');
+          moreText.style.height = '';
+          moreText.style.overflow = '';
+          moreText.style.transition = '';
+        }, 400);
+      }
+      img2.classList.toggle('hidden');
+      img3.classList.toggle('hidden');
+      this.textContent = isHidden ? 'Read less' : 'Read more';
+    });
+
+    // Smooth toggle for Issues details
+    const issuesBtn = document.getElementById('issues-learn-more');
+    const issuesDetails = document.getElementById('issues-details');
+    issuesBtn.addEventListener('click', function() {
+      const isHidden = issuesDetails.classList.contains('hidden');
+      if (isHidden) {
+        issuesDetails.classList.remove('hidden');
+        issuesDetails.style.height = '0px';
+        issuesDetails.style.overflow = 'hidden';
+        issuesDetails.style.transition = 'height 400ms cubic-bezier(0.4, 0, 0.2, 1)';
+        void issuesDetails.offsetWidth;
+        issuesDetails.style.height = issuesDetails.scrollHeight + 'px';
+        setTimeout(() => {
+          issuesDetails.style.height = '';
+          issuesDetails.style.overflow = '';
+          issuesDetails.style.transition = '';
+        }, 400);
+      } else {
+        issuesDetails.style.height = issuesDetails.scrollHeight + 'px';
+        issuesDetails.style.overflow = 'hidden';
+        issuesDetails.style.transition = 'height 400ms cubic-bezier(0.4, 0, 0.2, 1)';
+        void issuesDetails.offsetWidth;
+        issuesDetails.style.height = '0px';
+        setTimeout(() => {
+          issuesDetails.classList.add('hidden');
+          issuesDetails.style.height = '';
+          issuesDetails.style.overflow = '';
+          issuesDetails.style.transition = '';
+        }, 400);
+      }
+      this.textContent = isHidden ? 'Show less' : 'Learn more';
+    });
+
+    // Hamburger menu toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openBtn = document.getElementById('mobile-menu-toggle');
+    const closeBtn = document.getElementById('mobile-menu-close');
+    function openMobileMenu() {
+      mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.remove('opacity-100');
+      document.body.style.overflow = '';
+    }
+    openBtn.addEventListener('click', openMobileMenu);
+    closeBtn.addEventListener('click', closeMobileMenu);
+    // Close menu when clicking outside panel
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) closeMobileMenu();
+    });
+  </script>
+ <!-- DONATE BANNER -->
+ <section id="donate2" class="py-16 bg-[#B21E35] text-white text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-4">Donate</h2>
+  <h3 class="text-2xl md:text-3xl font-bold mb-4">Every $25 Moves Michigan Forward</h3>
+  <p class="mb-8 max-w-2xl mx-auto">Your contribution fuels door-knocking, yard signs, and the grassroots energy we need for victory.</p>
+  <form class="flex justify-center max-w-xl mx-auto">
+    <button type="submit" class="bg-white text-[#B21E35] font-bold px-4 py-3 rounded-lg shadow hover:shadow-lg donate-cta" onclick="window.open('https://www.efundraisingconnections.com/c/JoshuaPowell', '_blank', 'noopener,noreferrer'); return false;">Donate</button>
+  </form>
+</section>
+
+  <!-- EVENTS -->
+  <section id="events" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Left: Title and Description -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Join our Weekly Meet-and-Greet!</h2>
+          <p class="text-lg text-gray-700">Spend 30 minutes with Josh in a casual, live video chat—no podiums, no scripts, just honest conversation about the future of Westland and the ideas that matter to you. Bring your questions (or simply listen in), and leave with a clearer picture of the campaign and how you can make an impact. Spots refresh every week, so grab yours now and let's talk!</p>
+        </div>
+        <!-- Right: Calendly Widget -->
+        <div>
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/powell4michigan/round-robin" style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAT FOOTER -->
+  <footer class="bg-[#0B1F3A] text-white pt-12 pb-8 mt-16">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row md:justify-between gap-8">
+      <!-- Campaign Name/Logo -->
+      <div class="mb-6 md:mb-0 flex-1">
+        <a href="#" class="text-2xl font-extrabold tracking-wide text-white">POWELL '25</a>
+        <p class="mt-2 text-sm text-gray-300 max-w-xs">A vote for Josh Powell is a vote to bring balance & liberty back to Michigan.</p>
+        <div class="flex space-x-4 mt-4">
+          <!-- X (Twitter) -->
+          <a href="https://x.com/powell4westland" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" class="w-6 h-6 text-black" fill="currentColor"><rect width="120" height="120" rx="24" fill="none"/><path d="M86.5 32h-11.1L60 54.2 44.6 32H33.5l21.7 31.1L33 88h11.1l15.9-23.2L75.4 88H86.5L64.7 56.6 86.5 32zm-13.2 48.1-8.7-12.7-8.7 12.7H73.3zm-26.6-44.2 8.7 12.7 8.7-12.7H46.7z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/powell4westland/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-black" ><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 2.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25 1.25a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/powell4michigan/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-black" ><path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.261c-1.243 0-1.632.771-1.632 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Navigation Links -->
+      <nav class="flex-1">
+        <h4 class="text-lg font-semibold mb-3">Menu</h4>
+        <ul class="space-y-2">
+          <li><a href="#about" class="hover:text-[#B21E35] transition">About</a></li>
+          <li><a href="#issues" class="hover:text-[#B21E35] transition">Issues</a></li>
+          <li><a href="#events" class="hover:text-[#B21E35] transition">Events</a></li>
+          <li><a href="#donate" class="hover:text-[#B21E35] transition">Donate</a></li>
+        </ul>
+      </nav>
+      <!-- Back to Top -->
+      <div class="flex-1 flex flex-col items-start md:items-end justify-between">
+        <a href="#" class="mb-4 inline-block text-blue-300 hover:text-white underline">Back to top ↑</a>
+        <p class="text-sm text-gray-400 mt-auto">© 2025 Josh Powell Campaign. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
